@@ -7,7 +7,9 @@ html{
   --background: #fafafa;
 }
 body{
+  background: var(--background) ;
   font-family: 'Nunito Sans', sans-serif;
+  color: var(--black);
 }
 .App {
   text-align: center;
