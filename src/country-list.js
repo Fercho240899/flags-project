@@ -9,7 +9,6 @@ const CountryListStyled = styled.div`
   /* grid-template-columns: 1fr 1fr 1fr; */
   background: var(--background);
   justify-content: center;
-  border: 1px solid red;
   padding: 4em 2em;
 
 `
