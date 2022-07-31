@@ -10,6 +10,13 @@ const ActionListStyled = styled.div`
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
    }
+   @media screen and (min-width: 768px) {
+    .grid{
+      grid-template-columns: 480px 1fr 200px;
+    }
+    
+
+   }
   
 `
 
@@ -19,6 +26,7 @@ function ActionList() {
       <Wrapper>
         <div className="grid">
         <Search />
+        <span></span>
         <FilterbyRegion />
         </div>
       </Wrapper>

@@ -36,7 +36,7 @@ function Search() {
   };
 
   return (
-    <SearchStyled>
+    <SearchStyled >
       {
       inputValue && 
       <i class="fas fa-times close" onClick={clearInput}></i>}

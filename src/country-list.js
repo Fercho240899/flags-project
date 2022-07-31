@@ -2,14 +2,19 @@ import React, { useEffect } from "react"
 import styled from "styled-components";
 import Country from "./country";
 import { useSelector, useDispatch } from "react-redux";
+import Wrapper from "./wrapper";
 
 const CountryListStyled = styled.div`
   display: grid;
-  grid-row-gap: 2.3em;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-row-gap: 2.5em;
+  grid-auto-flow: columns;
+  grid-column-gap: 75px;
+  grid-template-columns: repeat(auto-fill, 270px);
   background: var(--background);
   justify-content: center;
-  padding: 4em 2em;
+  padding: 4em 0;
+
+
 
 `
 
@@ -50,10 +55,11 @@ function CountryList() {
   }, [dispatch]);
   
   return (
+    <Wrapper>
     <CountryListStyled>
             
       {
-      countryList.map(({ flag, name, population, region, capital }) => {
+      countryList.map(({ flag, name, population, region, capital, cioc, alpha2Code,}) => {
           return (
             <Country
               flag={flag}
@@ -62,11 +68,14 @@ function CountryList() {
               population={population}
               region={region}
               capital={capital}
+              cioc={cioc}
+              alpha2Code={alpha2Code}
             />
           );
         }
       )}
     </CountryListStyled>
+    </Wrapper>
   );
 }
 

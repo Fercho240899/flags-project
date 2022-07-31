@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const InputStyled = styled.label`
   display: inline-flex;
-  background: white;
+  background: var(--white);
   align-items: center;
   padding: 0 2rem;
   border-radius: 5px;
